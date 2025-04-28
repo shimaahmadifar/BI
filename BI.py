@@ -36,10 +36,8 @@ if selected == "Loading Dataset":
     if st.button("Load Data"):
         st.write("Data Loaded Successfully")
     st.title("Review Datasets")
-    st.write("1. Introduction
-              The purpose of this project was to systematically clean, transform, and prepare two datasets:
-              Meteorological data (df): Includes temperature and humidity measurements.
-              Entomological data (db): Includes insect capture events and cleaning events.")
+    st.write("1. Introduction" ,"\n",
+             " The purpose of this project was to systematically clean, transform, and prepare two datasets:Meteorological data (df): Includes temperature and humidity measurements. Entomological data (db): Includes insect capture events and cleaning events.")
     st.dataframe(df1.head())  # head() by default shows first 5 rows
 
     st.title("Merge Datasets")
