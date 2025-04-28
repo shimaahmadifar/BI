@@ -19,7 +19,7 @@ db2 = pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/graf
 db3 = pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/grafico-delle-catture%20(Imola%201).csv")
 db4 = pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/grafico-delle-catture%20(Imola%202).csv")
 db5 = pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/grafico-delle-catture%20(Imola%203).csv")
-
+db= pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/data.csv")
 
 
 if selected == "Home":
@@ -40,7 +40,7 @@ if selected == "Loading Dataset":
     st.dataframe(df1.head())  # head() by default shows first 5 rows
 
     st.title("Merge Datasets")
- 
+    st.dataframe(db.head())
 
 
 if selected == "Data Preprocessing":
