@@ -61,7 +61,7 @@ if selected == "Data Preprocessing":
               'Unnamed: 3' (an automatically generated name) was renamed to 'Temperatura Intervallo High'
                2.6. Dropping Unnecessary Columns
                Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The **Time** column was dropped.""")
-     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi1.png")          
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi1.png")          
             
 
 
