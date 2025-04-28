@@ -26,7 +26,9 @@ if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
     st.write("**Insects Analysis and Prediction Using Weather Data and Time series**")
-    st.write("Seyed Sadeqh Elmi Mousavi-D03000009 \n Zahra JafarNejad-D03000083 \n Shima Ahmadifar-D03000079 \n")
+    st.write("""Seyed Sadeqh Elmi Mousavi D03000009 \n
+                Zahra JafarNejad-D03000083 \n 
+                Shima Ahmadifar-D03000079""")
 
 
 #page l
@@ -64,14 +66,29 @@ if selected == "Data Preprocessing":
                2.6. Dropping Unnecessary Columns \n
                Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The **Time** column was dropped.""")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi1.png")          
-            
+    st.write(""" 2.7 Grouping by Date: Data was grouped by the Date column, and the following operations were performed:
+                 For numeric columns, the mean value was calculated for each day.
+                 For Label, the first occurrence was taken, assuming that all data for a given date belongs to the same location.
+                 2.8 Correcting Number Formatting: Some numeric values used commas (,) instead of dots (.) as decimal separators.
+                                                   Replace commas with dots.
+                                                   Convert the corrected text into numeric types.
+                 2.9: Renaming Columns for Clarity:
+                                                   "Media Temperatura" to: "Avg Temperature",
+                                                   "Temperatura Intervallo" to: "Temperature Low",
+                                                   "Unnamed: 3" to: "Temperature High",
+                                                   "Media Umidità" to: "Avg Humidity"     """)
+       
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi2.png")
 
 
 
 
 
 
-#End of page2              
+
+
+#End of page2------------------------------------------------------------------------------------------------
+
 if selected == "Data Analyse":
     st.title(f" {selected}")
 if selected == "Classification":
