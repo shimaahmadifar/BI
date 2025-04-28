@@ -12,7 +12,7 @@ if selected == "Home":
     st.title(f"Professor FLORA AMATO")
     st.write("Insects Analysis and Prediction Using Weather Data and Time series")
     st.write("\n"
-             "Seyed Sadeqh Elmi Mousavi-D030000?" "\n" "Negar Jafar Nejad-D030000?" "\n" "Shima Ahmadifar-D030000?" "\n"
+             "Seyed Sadeqh Elmi Mousavi-D030000?" "\n" "Negar Jafar Nejad-D030000?" "\n" "Shima Ahmadifar-D030000?" "\n")
 
 
 if selected == "Data Preprocessing":
