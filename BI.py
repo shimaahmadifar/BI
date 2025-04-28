@@ -25,7 +25,7 @@ db= pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/data.c
 if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
-    st.write("Insects Analysis and Prediction Using Weather Data and Time series")
+    st.write("**Insects Analysis and Prediction Using Weather Data and Time series**")
     st.write("\n"
              "Seyed Sadeqh Elmi Mousavi-D030000?" "\n" "Negar Jafar Nejad-D030000?" "\n" "Shima Ahmadifar-D030000?" "\n")
 
@@ -34,7 +34,7 @@ if selected == "Home":
 if selected == "Loading Dataset":
     st.title(f"{selected}")
     if st.button("Load Data"):
-        st.write("##Data Loaded Successfully")
+        st.write('####Data Loaded Successfully')
     st.title("Review Datasets")
     st.write("**1. Introduction**" ,"\n",
              " The purpose of this project was to systematically clean, transform, and prepare two datasets:Meteorological data (df): Includes temperature and humidity measurements.")
