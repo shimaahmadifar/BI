@@ -110,15 +110,17 @@ if selected == "Data Preprocessing":
 
 if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
-    st.write("""   3.1Basic Information
-                      3.2 Summary Statistics
-                      3.3 Checking for Missing Values
-                      3.4 Correlation Analysis
-                      3.5 Bar Plot: Number of New Captures (1) per Label
-                      3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures
-                      3.7 Boxplots: Avg Temperature and Humidity by Capture Events
-                      3.8  Time Series Plot: Trends of Temperature, Humidity, and Captures Over Time
-                      """)
+    st.title("3.1Basic Information")
+    st.write("Display of the data types, non-null counts, and memory usage of the data dataframe")
+    st.dataframe(data.info())
+    
+    st.title("3.2 Summary Statistics")
+    st.title("3.3 Checking for Missing Values")
+    st.title("3.4 Correlation Analysis")
+    st.title("3.5 Bar Plot: Number of New Captures per Label")
+    st.title("3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures")
+    st.title("3.7 Boxplots: Avg Temperature and Humidity by Capture Events")
+    st.title("3.8 Time Series Plot: Trends of Temperature, Humidity, and Captures Over Time")
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
 #Page 4 Classification---------------------------------------------------------------------------------------------------------
