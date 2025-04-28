@@ -54,7 +54,8 @@ if selected == "Data Preprocessing":
     st.write("2.1. Dropping the First Row"
               "The first row contained redundant header information that was not part of the actual measurements.")
     st.dataframe(df1.head())
-    st.write(""" \n2.2. Adding Location Labels \n
+    st.write("""
+              \n 2.2. Adding Location Labels \n
               Each dataset was assigned a unique label indicating its source location: \n
               2.3. Separating Date and Time" \n
               A custom function separate_datetime() was applied to each DataFrame \n
