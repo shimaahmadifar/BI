@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
+import pandas as pd
 
 with st.sidebar:
     selected = option_menu(
@@ -25,7 +26,9 @@ if selected == "Loading Dataset":
     st.title(f"{selected}")
     if st.button("Load Data"):
         st.write("Data Loaded Successfully")
-         st.dataframe(df.head(5))  
+        st.write("### First Rows of DataFrame:")
+        st.dataframe(df.head())  # head() by default shows first 5 rows
+ 
 
 
 if selected == "Data Preprocessing":
