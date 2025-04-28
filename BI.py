@@ -49,7 +49,7 @@ if selected == "Data Preprocessing":
     st.title(f"{selected}")
     st.write("2.1. Dropping the First Row"
               "The first row contained redundant header information that was not part of the actual measurements.")
-    st.dataframe(db1(1:5))
+    st.dataframe(db1([1:5]))
     st.write("2.2. Adding Location Labels"
               "Each dataset was assigned a unique label indicating its source location:"
               "2.3. Separating Date and Time"
