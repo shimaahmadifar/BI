@@ -4,9 +4,11 @@ from streamlit_option_menu import option_menu
 with st.sidebar:
     selected = option_menu(
         menu_title="Home",
-        options=["Home","Data Preprocessing", "Data Analyse", "Modeling"],
+        options=["Home","Loading Dataset","Data Preprocessing", "Data Analyse", "Modeling"],
 
     )
+
+
 if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
@@ -15,9 +17,17 @@ if selected == "Home":
              "Seyed Sadeqh Elmi Mousavi-D030000?" "\n" "Negar Jafar Nejad-D030000?" "\n" "Shima Ahmadifar-D030000?" "\n")
 
 
+
+if selected == "Loading Dataset":
+    st.title(f"{selected}")
+    if st.button("Load Data"):
+        st.write("Data Loaded Successfully")
+        
+
+
 if selected == "Data Preprocessing":
-    st.title(f"You have selected {selected}")
+    st.title(f"{selected}")
 if selected == "Data Analyse":
-    st.title(f"You have selected {selected}")
+    st.title(f" {selected}")
 if selected == "Modeling":
-    st.title(f"You have selected {selected}")
+    st.title(f" {selected}")
