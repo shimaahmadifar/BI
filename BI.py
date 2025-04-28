@@ -34,12 +34,13 @@ if selected == "Home":
 if selected == "Loading Dataset":
     st.title(f"{selected}")
     if st.button("Load Data"):
-        st.write('####Data Loaded Successfully')
+        st.write('Data Loaded Successfully')
     st.title("Review Datasets")
     st.write("**1. Introduction**" ,"\n",
              " The purpose of this project was to systematically clean, transform, and prepare two datasets:Meteorological data (df): Includes temperature and humidity measurements.")
     st.dataframe(df1.head())  # head() by default shows first 5 rows
     st.write(" Entomological data (db): Includes insect capture events and cleaning events.")
+    st.dataframe(db1.head())
     st.title("Merge Datasets")
     st.dataframe(db.head())
 
