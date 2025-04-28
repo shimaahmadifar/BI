@@ -5,7 +5,7 @@ import pandas as pd
 with st.sidebar:
     selected = option_menu(
         menu_title="Home",
-        options=["Home","Loading Dataset","Data Preprocessing", "Data Analyse", "Modeling"],
+        options=["Home","Loading Dataset","Data Preprocessing", "Data Analyse", "Classification", "Time series Analysis"],
 
     )
 
