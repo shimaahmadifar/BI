@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import pandas as pd
+import io
 
 with st.sidebar:
     selected = option_menu(
@@ -110,12 +111,21 @@ if selected == "Data Preprocessing":
 
 if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
+    
     st.title("3.1Basic Information")
-    st.write("Display of the data types, non-null counts, and memory usage of the data dataframe")
-    st.dataframe(data.info())
+    buffer = io.StringIO()
+    data.info(buf=buffer)
+    info = buffer.getvalue()
+    st.subheader("Basic Info")
+    st.text(info)
+
     
     st.title("3.2 Summary Statistics")
+    st.dataframe(data.describe())
+    
     st.title("3.3 Checking for Missing Values")
+    st.dataframe(data.isnull().sum())
+    
     st.title("3.4 Correlation Analysis")
     st.title("3.5 Bar Plot: Number of New Captures per Label")
     st.title("3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures")
