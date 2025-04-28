@@ -42,6 +42,10 @@ if selected == "Loading Dataset":
     st.write(" Entomological data (db): Includes insect capture events and cleaning events.")
     st.dataframe(db1.head())
     st.title("Merge Datasets")
+    def merge_dataframes(*dfs):
+    return pd.concat(dfs, ignore_index=True)
+    merged_df = merge_dataframes(db1, db2, db3, db4, db5)
+    db = merged_df
     st.dataframe(db.head())
 
 
