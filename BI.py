@@ -118,6 +118,7 @@ if selected == "Exploratory Data Analysis":
     "Non-Null Count": db.notnull().sum().values,
     "Data Type": db.dtypes.values
      })
+    st.dataframe(info_df)
     
     
     st.title("3.2 Summary Statistics")
