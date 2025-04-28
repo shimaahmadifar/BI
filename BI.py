@@ -37,7 +37,7 @@ if selected == "Loading Dataset":
     if st.button("Load Data"):
         st.write('Data Loaded Successfully')
     st.title("Review Datasets")
-    st.write(""" *** 1. Introduction***:  This project contains two datasets: 
+    st.write(""" This project contains two datasets: 
                                                             \n Meteorological data : Includes temperature and humidity measurements.""")
     st.dataframe(df1.head())  # head() by default shows first 5 rows
     st.write(" Entomological data : Includes insect capture events and cleaning events.")
