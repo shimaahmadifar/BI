@@ -37,7 +37,8 @@ if selected == "Loading Dataset":
     if st.button("Load Data"):
         st.write('Data Loaded Successfully')
     st.title("Review Datasets")
-    st.write("1. Introduction:  This project contains two datasets: \n Meteorological data : Includes temperature and humidity measurements.")
+    st.write(""" *** 1. Introduction***:  This project contains two datasets: 
+                                                            \n Meteorological data : Includes temperature and humidity measurements.""")
     st.dataframe(df1.head())  # head() by default shows first 5 rows
     st.write(" Entomological data : Includes insect capture events and cleaning events.")
     st.dataframe(db1.head())
@@ -53,7 +54,7 @@ if selected == "Data Preprocessing":
     st.write("2.1. Dropping the First Row"
               "The first row contained redundant header information that was not part of the actual measurements.")
     st.dataframe(df1.head())
-    st.write("""2.2. Adding Location Labels \n
+    st.write(""" \n2.2. Adding Location Labels \n
               Each dataset was assigned a unique label indicating its source location: \n
               2.3. Separating Date and Time" \n
               A custom function separate_datetime() was applied to each DataFrame \n
@@ -66,17 +67,17 @@ if selected == "Data Preprocessing":
                2.6. Dropping Unnecessary Columns \n
                Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The **Time** column was dropped.""")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi1.png")          
-    st.write(""" 2.7 Grouping by Date: Data was grouped by the Date column, and the following operations were performed:
-                 For numeric columns, the mean value was calculated for each day.
-                 For Label, the first occurrence was taken, assuming that all data for a given date belongs to the same location.
-                 2.8 Correcting Number Formatting: Some numeric values used commas (,) instead of dots (.) as decimal separators.
-                                                   Replace commas with dots.
-                                                   Convert the corrected text into numeric types.
-                 2.9: Renaming Columns for Clarity:
-                                                   "Media Temperatura" to: "Avg Temperature",
-                                                   "Temperatura Intervallo" to: "Temperature Low",
-                                                   "Unnamed: 3" to: "Temperature High",
-                                                   "Media Umidità" to: "Avg Humidity"     """)
+    st.write(""" \n2.7 Grouping by Date: Data was grouped by the Date column, and the following operations were performed:
+                  \nFor numeric columns, the mean value was calculated for each day.
+                 \nFor Label, the first occurrence was taken, assuming that all data for a given date belongs to the same location.
+                 \n2.8 Correcting Number Formatting: Some numeric values used commas (,) instead of dots (.) as decimal separators.
+                                                   \nReplace commas with dots.
+                                                   \nConvert the corrected text into numeric types.
+                 \n2.9: Renaming Columns for Clarity:
+                                                   \n"Media Temperatura" to: "Avg Temperature",
+                                                   \n"Temperatura Intervallo" to: "Temperature Low",
+                                                   \n"Unnamed: 3" to: "Temperature High",
+                                                   \n"Media Umidità" to: "Avg Humidity"     """)
        
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi2.png")
 
