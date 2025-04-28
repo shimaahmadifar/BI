@@ -26,7 +26,7 @@ if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
     st.write("**Insects Analysis and Prediction Using Weather Data and Time series**")
-    st.write(""" \nSeyed Sadeqh Elmi Mousavi D03000009 
+    st.write(""" \nSeyed Sadeqh Elmi Mousavi-D03000009 
                  \nZahra JafarNejad-D03000083 
                  \nShima Ahmadifar-D03000079""")
 
@@ -114,8 +114,10 @@ if selected == "Exploratory Data Analysis":
                       3.2 Summary Statistics
                       3.3 Checking for Missing Values
                       3.4 Correlation Analysis
-                      
-
+                      3.5 Bar Plot: Number of New Captures (1) per Label
+                      3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures
+                      3.7 Boxplots: Avg Temperature and Humidity by Capture Events
+                      3.8  Time Series Plot: Trends of Temperature, Humidity, and Captures Over Time
                       """)
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
