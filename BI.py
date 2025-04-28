@@ -81,7 +81,22 @@ if selected == "Data Preprocessing":
                                                    \n"Media Umidità" to: "Avg Humidity"     """)
        
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi2.png")
+    st.write(""" 
+                \n 2.10 Calculating Daily Statistics: Grouped our data by: Label (location) and Date. and calculated: 
+                                                                       \n Mean of average temperature (Avg Temperature).
+                                                                        \nMinimum of temperature low (Min Temperature).
+                                                                       \n Maximum of temperature high (Max Temperature).
+                                                                        \nMean of average humidity (Avg Humidity).
+                                                                       \n To Summarize measurements at a daily level per location
+                    \n2.11 Dropping Unnecessary Columns
+                    \n2.12 Dropping Irrelevant Columns
+                    \n2.13 Changing and Renaming Insect Capture Columns
+                    \n2.14 Handling Missing Values
+                    \n2.15 Merging Datasets
+                    \n2.16 Preparing the Target Variable
+            
 
+                 """)
 
 
 
@@ -91,7 +106,7 @@ if selected == "Data Preprocessing":
 
 #End of page2------------------------------------------------------------------------------------------------
 
-if selected == "Data Analyse":
+if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
 if selected == "Classification":
     st.title(f" {selected}")
