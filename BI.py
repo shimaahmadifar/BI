@@ -110,7 +110,13 @@ if selected == "Data Preprocessing":
 
 if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
+    st.write("""   3.1Basic Information
+                      3.2 Summary Statistics
+                      3.3 Checking for Missing Values
+                      3.4 Correlation Analysis
+                      
 
+                      """)
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
 #Page 4 Classification---------------------------------------------------------------------------------------------------------
