@@ -113,11 +113,12 @@ if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
     
     st.title("3.1Basic Information")
-    buffer = io.StringIO()
-    data.info(buf=buffer)
-    info = buffer.getvalue()
-    st.subheader("Basic Info")
-    st.text(info)
+    info_df = pd.DataFrame({
+    "Column": data.columns,
+    "Non-Null Count": data.notnull().sum().values,
+    "Data Type": data.dtypes.values
+                                    })
+    st.dataframe(info_df)
 
     
     st.title("3.2 Summary Statistics")
