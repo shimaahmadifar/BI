@@ -45,6 +45,28 @@ if selected == "Loading Dataset":
 
 if selected == "Data Preprocessing":
     st.title(f"{selected}")
+    st.write("2.1. Dropping the First Row"
+              "\n"
+             "The first row likely contained redundant header information or invalid data that was not part of the actual measurements."
+             "2.2. Adding Location Labels
+              Each dataset was assigned a unique label indicating its source location:"
+              "2.3. Separating Date and Time
+              A custom function separate_datetime() was applied to each DataFrame:
+              2.5. Renaming Columns
+              Some columns were renamed to improve clarity:
+              'Temperatura Intervallo' was renamed to 'Temperatura Intervallo Low'.
+              'Unnamed: 3' (an automatically generated name) was renamed to 'Temperatura Intervallo High'.
+               Purpose: To make column names descriptive and self-explanatory.
+               2.6. Dropping Unnecessary Columns
+               Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The Time column was dropped."
+               
+
+
+
+
+
+
+             
 if selected == "Data Analyse":
     st.title(f" {selected}")
 if selected == "Modeling":
