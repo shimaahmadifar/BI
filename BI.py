@@ -26,8 +26,7 @@ if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
     st.write("**Insects Analysis and Prediction Using Weather Data and Time series**")
-    st.write("\n"
-             "Seyed Sadeqh Elmi Mousavi-D030000?" "\n" "Negar Jafar Nejad-D030000?" "\n" "Shima Ahmadifar-D030000?" "\n")
+    st.write("\nSeyed Sadeqh Elmi Mousavi-D03000009\n Zahra JafarNejad-D03000083\nShima Ahmadifar-D03000079\n")
 
 
 
@@ -53,14 +52,16 @@ if selected == "Data Preprocessing":
     st.write("""2.2. Adding Location Labels
               Each dataset was assigned a unique label indicating its source location:
               2.3. Separating Date and Time"
-              A custom function separate_datetime() was applied to each DataFrame:
+              A custom function separate_datetime() was applied to each DataFrame
+              2.4. Merging Datasets
+              All individual datasets were merged into a single DataFrame
               2.5. Renaming Columns
               To make column names descriptive and self-explanatory Some columns were renamed to improve clarity:
               'Temperatura Intervallo' was renamed to 'Temperatura Intervallo Low'. 
               'Unnamed: 3' (an automatically generated name) was renamed to 'Temperatura Intervallo High'
                2.6. Dropping Unnecessary Columns
-               Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The Time column was dropped.""")
-               
+               Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The **Time** column was dropped.""")
+     st.image(bi1.png)          
             
 
 
