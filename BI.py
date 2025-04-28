@@ -49,16 +49,17 @@ if selected == "Data Preprocessing":
     st.title(f"{selected}")
     st.write("2.1. Dropping the First Row"
               "The first row contained redundant header information that was not part of the actual measurements.")
-    st.dataframe(db1([1:5]))
-    st.write("2.2. Adding Location Labels"
-              "Each dataset was assigned a unique label indicating its source location:"
-              "2.3. Separating Date and Time"
-              "A custom function separate_datetime() was applied to each DataFrame:"
-              "2.5. Renaming Columns"
-              "Some columns were renamed to improve clarity:"
-              "'Temperatura Intervallo' was renamed to 'Temperatura Intervallo Low'. 'Unnamed: 3' (an automatically generated name) was renamed to 'Temperatura Intervallo High'.Purpose: To make column names descriptive and self-explanatory."
-               "2.6. Dropping Unnecessary Columns"
-               "Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The Time column was dropped.")
+    st.dataframe(df1.head())
+    st.write("""2.2. Adding Location Labels
+              Each dataset was assigned a unique label indicating its source location:
+              2.3. Separating Date and Time"
+              A custom function separate_datetime() was applied to each DataFrame:
+              2.5. Renaming Columns
+              To make column names descriptive and self-explanatory Some columns were renamed to improve clarity:
+              'Temperatura Intervallo' was renamed to 'Temperatura Intervallo Low'. 
+              'Unnamed: 3' (an automatically generated name) was renamed to 'Temperatura Intervallo High'
+               2.6. Dropping Unnecessary Columns
+               Since the focus of analysis was on daily measurements, detailed time information was no longer necessary,The Time column was dropped.""")
                
             
 
