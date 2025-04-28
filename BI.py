@@ -42,18 +42,15 @@ if selected == "Loading Dataset":
     st.write(" Entomological data (db): Includes insect capture events and cleaning events.")
     st.dataframe(db1.head())
     st.title("Merge Datasets")
-    def merge_dataframes(*dfs):
-        return pd.concat(dfs, ignore_index=True)
-    merged_df = merge_dataframes(db1, db2, db3, db4, db5)
-    db = merged_df
     st.dataframe(db.head())
 
 
 if selected == "Data Preprocessing":
     st.title(f"{selected}")
     st.write("2.1. Dropping the First Row"
-              "The first row likely contained redundant header information or invalid data that was not part of the actual measurements."
-             "2.2. Adding Location Labels"
+              "The first row contained redundant header information that was not part of the actual measurements.")
+    st.dataframe(db1(1:5))
+    st.write("2.2. Adding Location Labels"
               "Each dataset was assigned a unique label indicating its source location:"
               "2.3. Separating Date and Time"
               "A custom function separate_datetime() was applied to each DataFrame:"
