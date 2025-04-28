@@ -8,6 +8,9 @@ with st.sidebar:
 
     )
 
+df = pd.read_csv(https://github.com/shimaahmadifar/BI/blob/main/dati-meteo-storici%20(Cicalino%201).csv)
+
+
 
 if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
@@ -22,7 +25,7 @@ if selected == "Loading Dataset":
     st.title(f"{selected}")
     if st.button("Load Data"):
         st.write("Data Loaded Successfully")
-        
+         st.dataframe(df.head(5))  
 
 
 if selected == "Data Preprocessing":
