@@ -8,7 +8,7 @@ with st.sidebar:
 
     )
 
-df = pd.read_csv(dati-meteo-storici (Cicalino 1).csv)
+df = pd.read_csv("https://raw.githubusercontent.com/shimaahmadifar/BI/main/grafico-delle-catture%20(Cicalino%201).csv)
 
 
 
