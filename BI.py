@@ -26,8 +26,8 @@ if selected == "Home":
     st.title(f"Information Systems & Business Intelligence")
     st.title(f"Professor FLORA AMATO")
     st.write("**Insects Analysis and Prediction Using Weather Data and Time series**")
-    st.write("""Seyed Sadeqh Elmi Mousavi D03000009 \n
-                Zahra JafarNejad-D03000083 \n 
+    st.write("""Seyed Sadeqh Elmi Mousavi D03000009 
+                Zahra JafarNejad-D03000083 
                 Shima Ahmadifar-D03000079""")
 
 
@@ -37,9 +37,9 @@ if selected == "Loading Dataset":
     if st.button("Load Data"):
         st.write('Data Loaded Successfully')
     st.title("Review Datasets")
-    st.write("1. Introduction:  The purpose of this project was to systematically clean, transform, and prepare two datasets:Meteorological data (df): Includes temperature and humidity measurements.")
+    st.write("1. Introduction:  This project contains two datasets:Meteorological data : Includes temperature and humidity measurements.")
     st.dataframe(df1.head())  # head() by default shows first 5 rows
-    st.write(" Entomological data (db): Includes insect capture events and cleaning events.")
+    st.write(" Entomological data : Includes insect capture events and cleaning events.")
     st.dataframe(db1.head())
     st.title("Merge Datasets")
     st.dataframe(db.head())
