@@ -276,7 +276,13 @@ if selected == "Exploratory Data Analysis":
 
 if selected == "Classification":
     st.title(f" {selected}")
+    
     st.title("4.1 Logistic Regression")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
+    st.write("Accuracy Score: 0.8666666666666667")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr3.png")
+    
     st.title("4.2 Random Forest")
     st.title("4.3 XGBoost")
     st.title("4.4 Decision Tree")
