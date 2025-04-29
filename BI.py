@@ -162,7 +162,8 @@ if selected == "Exploratory Data Analysis":
 
     st.title("3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures")
    
-
+    import streamlit as st
+    import plotly.express as px
     # Ensure that 'New Captures (per Event)' is of type string for proper categorical mapping
     db['New Captures (per Event)'] = db['New Captures (per Event)'].astype(str)
     # Create the interactive scatter plot
