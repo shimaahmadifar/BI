@@ -284,10 +284,35 @@ if selected == "Classification":
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr3.png")
     
     st.title("4.2 Random Forest")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF1.png")
+    st.write("Accuracy Score for Random Forest: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF3.png")
+    
     st.title("4.3 XGBoost")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb1.png")
+    st.write("Accuracy Score for XGBoost: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb3.png")
+
+    
     st.title("4.4 Decision Tree")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+
+    
     st.title("4.5 SVM")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm1.png")
+    st.write("Accuracy Score for SVM: 0.7333333333333333")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm3.png")
+
+    
     st.title( "Comparison")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/all.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/all2.png")
     
 #End of Page 4--------------------------------------------------------------------------------------------------------------
 #Page 5 Time series Analysis----------------------------------------------------------------------------------------------------
