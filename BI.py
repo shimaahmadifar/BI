@@ -328,11 +328,28 @@ if selected == "Time series Analysis":
                     \n MAE  (Mean Absolute Error): 0.69
                     \n R² Score (Coefficient of Determination): 0.03""")
         st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/sarimax.png")
+    
     st.title("5.2 XGBoost Forecast ")
-
+    st.subheader("Evaluation Results:")
+    st.write("""
+            \n MAE  (Mean Absolute Error): 0.73
+            \n R² Score (Coefficient of Determination): 0.39""")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb4.png")
     
     st.title("5.3 ARIMA")
-
+    st.subheader("Evaluation Results:")
+    st.write("""
+                \n  MAE  (Mean Absolute Error): 0.90
+                \n R² Score: -0.16
+                    """)
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/arima.png")
     
     st.title("5.4 ETS")
+    st.subheader("Evaluation Results:")
+    st.write("""
+            \n MAE  (Mean Absolute Error): 0.91
+            \n R² Score: -0.15")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS2.png")
+    
 
