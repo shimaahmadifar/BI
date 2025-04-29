@@ -164,7 +164,7 @@ if selected == "Exploratory Data Analysis":
    
 
     # Ensure that 'New Captures (per Event)' is of type string for proper categorical mapping
-    db['New Captures (per Event)'] = data['New Captures (per Event)'].astype(str)
+    db['New Captures (per Event)'] = db['New Captures (per Event)'].astype(str)
     # Create the interactive scatter plot
     fig = px.scatter(
         data_frame=db,
