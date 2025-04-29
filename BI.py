@@ -145,7 +145,7 @@ if selected == "Exploratory Data Analysis":
     # Subheader for context
     st.subheader("Number of 'New Captures = 1' per Label")
     # Filter only rows where 'New Captures (per Event)' = 1
-    new_captures_1 = data[data['New Captures (per Event)'] == 1]
+    new_captures_1 = db[db['New Captures (per Event)'] == 1]
     # Count occurrences per Label
     count_by_label = new_captures_1['Label'].value_counts()
     # Plot in Streamlit
