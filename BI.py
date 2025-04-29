@@ -112,6 +112,9 @@ if selected == "Data Preprocessing":
 if selected == "Exploratory Data Analysis":
     st.title(f" {selected}")
     
+    st.title("Merged Dataset")
+    st.dataframe(db.head())
+    
     st.title("3.1Basic Information")
     info_df = pd.DataFrame({
     "Column": db.columns,
@@ -128,6 +131,16 @@ if selected == "Exploratory Data Analysis":
     st.dataframe(db.isnull().sum())
     
     st.title("3.4 Correlation Analysis")
+    import seaborn as sns
+    import matplotlib.pyplot as plt
+    st.subheader("Correlation Heatmap of Numeric Features")
+    numeric_data = data.select_dtypes(include=['number'])
+    correlation_matrix = numeric_data.corr()
+    fig, ax = plt.subplots(figsize=(12, 10))
+    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", ax=ax)
+    ax.set_title('Correlation Heatmap')
+    st.pyplot(fig)
+    
     st.title("3.5 Bar Plot: Number of New Captures per Label")
     st.title("3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures")
     st.title("3.7 Boxplots: Avg Temperature and Humidity by Capture Events")
