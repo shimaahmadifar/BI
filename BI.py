@@ -184,12 +184,91 @@ if selected == "Exploratory Data Analysis":
     )
     # Display the plot in Streamlit
     st.plotly_chart(fig)
-
+    
 
     st.title("3.7 Boxplots: Avg Temperature and Humidity by Capture Events")
+    # Ensure the capture column is string for plotting consistency
+    db['New Captures (per Event)'] = db['New Captures (per Event)'].astype(str)
+    # Boxplot for Avg Temperature
+    fig1 = px.box(
+        db, 
+        x="New Captures (per Event)", 
+        y="Avg Temperature", 
+        color="New Captures (per Event)",
+        color_discrete_map={'0': 'lightblue', '1': 'salmon'},
+        title="Avg Temperature by Capture Event",
+        labels={"New Captures (per Event)": "New Captures", "Avg Temperature": "Avg Temperature (°C)"}
+    )
+    # Boxplot for Avg Humidity
+    fig2 = px.box(
+        db, 
+        x="New Captures (per Event)", 
+        y="Avg Humidity", 
+        color="New Captures (per Event)",
+        color_discrete_map={'0': 'lightblue', '1': 'salmon'},
+        title="Avg Humidity by Capture Event",
+        labels={"New Captures (per Event)": "New Captures", "Avg Humidity": "Avg Humidity (%)"}
+    )
+    # Display side-by-side in Streamlit
+    col1, col2 = st.columns(2)
+    with col1:
+        st.plotly_chart(fig1, use_container_width=True)
+    with col2:
+        st.plotly_chart(fig2, use_container_width=True)
 
 
     st.title("3.8 Time Series Plot: Trends of Temperature, Humidity, and Captures Over Time")
+    import plotly.graph_objects as go
+    import pandas as pd
+    # Convert Date column to datetime
+    db['Date'] = pd.to_datetime(db['Date'])
+    # Split out captures = 1
+    captures = db[db['New Captures (per Event)'] == 1]
+    # Create figure
+    fig = go.Figure()
+    # Line for temperature
+    fig.add_trace(go.Scatter(
+        x=db['Date'], y=db['Avg Temperature'],
+        mode='lines',
+        name='Avg Temp (°C)',
+        line=dict(color='red', width=2),
+        opacity=0.7
+    ))
+    # Line for humidity
+    fig.add_trace(go.Scatter(
+        x=db['Date'], y=db['Avg Humidity'],
+        mode='lines',
+        name='Avg Humidity (%)',
+        line=dict(color='blue', width=2),
+        opacity=0.7
+    ))
+    # Scatter for capture events - Temp
+    fig.add_trace(go.Scatter(
+        x=captures['Date'], y=captures['Avg Temperature'],
+        mode='markers',
+        name='Capture Event (Temp)',
+        marker=dict(color='black', size=10, symbol='x')
+    ))
+    # Scatter for capture events - Humidity
+    fig.add_trace(go.Scatter(
+        x=captures['Date'], y=captures['Avg Humidity'],
+        mode='markers',
+        name='Capture Event (Humidity)',
+        marker=dict(color='green', size=10, symbol='circle')
+    ))
+    # Layout
+    fig.update_layout(
+        title="Trends of Temperature, Humidity, and Insect Captures Over Time",
+        xaxis_title="Date",
+        yaxis_title="Value",
+        legend=dict(orientation='h'),
+        xaxis=dict(tickangle=45),
+        margin=dict(t=60),
+        height=600
+    )
+    # Display in Streamlit
+    st.plotly_chart(fig, use_container_width=True)
+
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
 #Page 4 Classification---------------------------------------------------------------------------------------------------------
