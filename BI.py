@@ -348,7 +348,7 @@ if selected == "Time series Analysis":
     st.subheader("Evaluation Results:")
     st.write("""
             \n MAE  (Mean Absolute Error): 0.91
-            \n R² Score: -0.15")
+            \n R² Score: -0.15      """)
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS2.png")
     
