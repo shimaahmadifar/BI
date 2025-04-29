@@ -320,4 +320,19 @@ if selected == "Classification":
 
 if selected == "Time series Analysis":
     st.title(f" {selected}")
+    
+    st.title("5.1 SARIMAX Forecast ")
+    if st.button("Show Explanation & Results"):
+        st.subheader("Evaluation Results:")
+        st.write("""
+                    \n MAE  (Mean Absolute Error): 0.69
+                    \n R² Score (Coefficient of Determination): 0.03""")
+        st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/sarimax.png")
+    st.title("5.2 XGBoost Forecast ")
+
+    
+    st.title("5.3 ARIMA")
+
+    
+    st.title("5.4 ETS")
 
