@@ -268,6 +268,7 @@ if selected == "Exploratory Data Analysis":
     )
     # Display in Streamlit
     st.plotly_chart(fig, use_container_width=True)
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/bi3.png") 
 
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
