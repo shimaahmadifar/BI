@@ -134,7 +134,7 @@ if selected == "Exploratory Data Analysis":
     import seaborn as sns
     import matplotlib.pyplot as plt
     st.subheader("Correlation Heatmap of Numeric Features")
-    numeric_data = data.select_dtypes(include=['number'])
+    numeric_data = db.select_dtypes(include=['number'])
     correlation_matrix = numeric_data.corr()
     fig, ax = plt.subplots(figsize=(12, 10))
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f", ax=ax)
