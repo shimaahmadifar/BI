@@ -142,8 +142,52 @@ if selected == "Exploratory Data Analysis":
     st.pyplot(fig)
     
     st.title("3.5 Bar Plot: Number of New Captures per Label")
+    # Subheader for context
+    st.subheader("Number of 'New Captures = 1' per Label")
+    # Filter only rows where 'New Captures (per Event)' = 1
+    new_captures_1 = data[data['New Captures (per Event)'] == 1]
+    # Count occurrences per Label
+    count_by_label = new_captures_1['Label'].value_counts()
+    # Plot in Streamlit
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.barplot(x=count_by_label.index, y=count_by_label.values, palette="viridis", ax=ax)
+    # Customize
+    ax.set_title("Number of 'New Captures = 1' per Label", fontsize=14)
+    ax.set_xlabel("Label", fontsize=12)
+    ax.set_ylabel("Count of New Captures = 1", fontsize=12)
+    ax.tick_params(axis='x', rotation=45)
+    ax.grid(axis='y', alpha=0.3)
+    # Show plot in Streamlit
+    st.pyplot(fig)
+
     st.title("3.6 Scatter Plot: Avg Temperature vs. Avg Humidity Colored by Captures")
+   
+
+    # Ensure that 'New Captures (per Event)' is of type string for proper categorical mapping
+    db['New Captures (per Event)'] = data['New Captures (per Event)'].astype(str)
+    # Create the interactive scatter plot
+    fig = px.scatter(
+        data_frame=db,
+        x="Avg Temperature",
+        y="Avg Humidity",
+        color="New Captures (per Event)",
+        symbol="New Captures (per Event)",
+        color_discrete_map={"0": "blue", "1": "red"},
+        symbol_map={"0": "circle", "1": "square"},
+        labels={
+            "Avg Temperature": "Average Temperature (°C)",
+            "Avg Humidity": "Average Humidity (%)",
+            "New Captures (per Event)": "New Captures"
+        },
+        title="Avg Temp vs. Humidity (Captures=1 as Squares, 0 as Circles)"
+    )
+    # Display the plot in Streamlit
+    st.plotly_chart(fig)
+
+
     st.title("3.7 Boxplots: Avg Temperature and Humidity by Capture Events")
+
+
     st.title("3.8 Time Series Plot: Trends of Temperature, Humidity, and Captures Over Time")
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
