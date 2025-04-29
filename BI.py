@@ -276,6 +276,12 @@ if selected == "Exploratory Data Analysis":
 
 if selected == "Classification":
     st.title(f" {selected}")
+    st.title("4.1 Logistic Regression")
+    st.title("4.2 Random Forest")
+    st.title("4.3 XGBoost")
+    st.title("4.4 Decision Tree")
+    st.title("4.5 SVM")
+    st.title( "Comparison")
     
 #End of Page 4--------------------------------------------------------------------------------------------------------------
 #Page 5 Time series Analysis----------------------------------------------------------------------------------------------------
