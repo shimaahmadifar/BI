@@ -31,6 +31,32 @@ if selected == "Home":
                  \nZahra JafarNejad-D03000083 
                  \nShima Ahmadifar-D03000079""")
 
+from PIL import Image, ImageDraw
+
+# Load the image (local or from URL if needed)
+image = Image.open("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
+
+# Create a circular mask
+def make_circle(img):
+    np_img = img.convert("RGBA")
+    size = np_img.size
+
+    # Create same-size alpha layer with circle
+    mask = Image.new('L', size, 0)
+    draw = ImageDraw.Draw(mask)
+    draw.ellipse((0, 0, size[0], size[1]), fill=255)
+
+    # Apply the mask to the image
+    np_img.putalpha(mask)
+    return np_img
+
+# Apply circular mask
+circular_img = make_circle(image)
+
+# Display in Streamlit
+st.image(circular_img, caption="Circular Image", use_column_width=False)
+
+
 
 #page l  Loading Dataset----------------------------------------------------------------------------------------
 if selected == "Loading Dataset":
