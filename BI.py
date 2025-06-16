@@ -38,11 +38,17 @@ if selected == "Loading Dataset":
     if st.button("Load Data"):
         st.write('Data Loaded Successfully')
     st.title("Review Datasets")
-    st.write(""" This project contains two datasets: 
+    st.write(""" This project contains two tpes of datasets: 
                                                             \n Meteorological data : Includes temperature and humidity measurements.""")
-    st.dataframe(df1.head())  # head() by default shows first 5 rows
-    st.write(" Entomological data : Includes insect capture events and cleaning events.")
-    st.dataframe(db1.head())
+    st.sidebar.markdown("## Select Dataset Type")
+    select_event = st.sidebar.selectbox('which dataset do you want to see?',
+                                    ['Meteorological data', ' Entomological data'])
+
+    if select_event == 'Meteorological data':
+        st.dataframe(df1.head())  # head() by default shows first 5 rows
+    else:
+        st.write(" Entomological data : Includes insect capture events and cleaning events.")
+        st.dataframe(db1.head())
     st.title("Merge Datasets")
     st.dataframe(db.head())
     
