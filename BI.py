@@ -30,8 +30,7 @@ if selected == "Home":
     st.write(""" \nSeyed Sadeqh Elmi Mousavi-D03000009 
                  \nZahra JafarNejad-D03000083 
                  \nShima Ahmadifar-D03000079""")
-image1 = Image.open("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
-st.image(image1 )
+st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
 
 
 
