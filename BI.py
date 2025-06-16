@@ -30,7 +30,7 @@ if selected == "Home":
     st.write(""" \nSeyed Sadeqh Elmi Mousavi-D03000009 
                  \nZahra JafarNejad-D03000083 
                  \nShima Ahmadifar-D03000079""")
-st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
 
 
 
@@ -49,14 +49,20 @@ if selected == "Loading Dataset":
     placeholder="Select Dataset",
     )
 
-    st.write("You selected:", option)
-
     if option == 'Meteorological data':
         st.write(" Meteorological data : Includes temperature and humidity measurements.")
-        st.dataframe(df1.head())  # head() by default shows first 5 rows
+        st.dataframe(df1.head()) 
+        st.dataframe(df2.head())
+        st.dataframe(df3.head())
+        st.dataframe(df4.head())
+        st.dataframe(df5.head())
     if option == 'Entomological data':
         st.write(" Entomological data : Includes insect capture events and cleaning events.")
-        st.dataframe(db1.head())  # head() by default shows first 5 rows
+        st.dataframe(db1.head())
+        st.dataframe(db2.head())
+        st.dataframe(db3.head())
+        st.dataframe(db4.head())
+        st.dataframe(db5.head())
     else:
         st.write(" Select Dataset")
         
