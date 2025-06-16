@@ -40,7 +40,16 @@ if selected == "Loading Dataset":
     st.title("Review Datasets")
     st.write(""" This project contains two tpes of datasets: 
                                                             \n Meteorological data : Includes temperature and humidity measurements.""")
-    st.sidebar.markdown("## Select Dataset Type")
+    option = st.selectbox(
+    "which dataset do you want to see?",
+    ("Meteorological data", "Entomological data"),
+    index=None,
+    placeholder="Select Dataset",
+    )
+
+    st.write("You selected:", option)
+
+
     select_event = st.sidebar.selectbox('which dataset do you want to see?',
                                     ['Meteorological data', ' Entomological data'])
 
