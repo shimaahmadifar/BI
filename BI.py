@@ -302,15 +302,19 @@ if selected == "Modelling and Forcasting":
 
 
     st.title("4 Time Series Diagnosis")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF2.png")
     st.write("Before building forecasting models, the time series was analyzed to understand its statistical properties and determine whether preprocessing was required.")
     st.write("Findings")
     st.write("The original series was non-stationary (ADF p-value > 0.05).")
     st.write("After first-order differencing, the series became stationary (ADF p-value < 0.05).")
     st.write("Weak weekly seasonality was observed.")
     st.write(" Based on these results, differencing order d = 1 was selected for ARIMA-family models.")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr2.png")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr3.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF1.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF3.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF4.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF5.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF6.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/BIF7.png")
 
     st.title("4.1 Naive")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
