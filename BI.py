@@ -299,7 +299,19 @@ if selected == "Exploratory Data Analysis":
 
 if selected == "Modelling and Forcasting":
     st.title(f" {selected}")
-    
+
+
+    st.title("4 Time Series Diagnosis")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
+    st.write("Before building forecasting models, the time series was analyzed to understand its statistical properties and determine whether preprocessing was required.
+               Findings
+               The original series was non-stationary (ADF p-value > 0.05).
+               After first-order differencing, the series became stationary (ADF p-value < 0.05).
+               Weak weekly seasonality was observed.
+               Based on these results, differencing order d = 1 was selected for ARIMA-family models.")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr3.png")
+
     st.title("4.1 Naive")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
     st.write("Accuracy Score: 0.8666666666666667")
