@@ -303,7 +303,7 @@ if selected == "Modelling and Forcasting":
 
     st.title("4 Time Series Diagnosis")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
-    st.write("Before building forecasting models, the time series was analyzed to understand its statistical properties and determine whether preprocessing was required.
+    st.write("Before building forecasting models, the time series was analyzed to understand its statistical properties and determine whether preprocessing was required.")
     st.write("Findings")
     st.write("The original series was non-stationary (ADF p-value > 0.05).")
     st.write("After first-order differencing, the series became stationary (ADF p-value < 0.05).")
