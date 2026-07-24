@@ -6,7 +6,7 @@ import io
 with st.sidebar:
     selected = option_menu(
         menu_title="Home",
-        options=["Home","Loading Dataset","Data Preprocessing", "Exploratory Data Analysis", "Classification", "Time series Analysis"],
+        options=["Home","Loading Dataset","Data Preprocessing", "Exploratory Data Analysis", "Modelling and Forcasting"],
 
     )
 
@@ -30,7 +30,7 @@ if selected == "Home":
     st.write(""" \nSeyed Sadeqh Elmi Mousavi-D03000009 
                  \nZahra JafarNejad-D03000083 
                  \nShima Ahmadifar-D03000079""")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/shima.jpg")
+    
 
 
 
@@ -295,84 +295,81 @@ if selected == "Exploratory Data Analysis":
 
 
 #End of Page 3 EDA-------------------------------------------------------------------------------------------------------------
-#Page 4 Classification---------------------------------------------------------------------------------------------------------
+#Page 4 Modelling and Forcasting---------------------------------------------------------------------------------------------------------
 
-if selected == "Classification":
+if selected == "Modelling and Forcasting":
     st.title(f" {selected}")
     
-    st.title("4.1 Logistic Regression")
+    st.title("4.1 Naive")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr1.png")
     st.write("Accuracy Score: 0.8666666666666667")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr2.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/logr3.png")
+
+
+    st.title("4.2 ARIMA")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+
+    st.title("4.3 ARIMAX")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+
+    st.title("4.4 SARIMA")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+
+
+    st.title("4.5 SARIMAX")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+
+    st.title("4.6 Auto ARIMA")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
     
-    st.title("4.2 Random Forest")
+    st.title("4.7 ETS")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
+    st.write("Accuracy Score for Decision Tree: 0.9")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
+    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
+    
+    
+    st.title("4.8 Random Forest")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF1.png")
     st.write("Accuracy Score for Random Forest: 0.9")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF2.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/RF3.png")
     
-    st.title("4.3 XGBoost")
+    st.title("4.9 XGBoost")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb1.png")
     st.write("Accuracy Score for XGBoost: 0.9")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb2.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb3.png")
 
     
-    st.title("4.4 Decision Tree")
+    st.title("Comparison")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt1.png")
     st.write("Accuracy Score for Decision Tree: 0.9")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt2.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/dt3.png")
 
     
-    st.title("4.5 SVM")
+    st.title("Forcasting")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm1.png")
     st.write("Accuracy Score for SVM: 0.7333333333333333")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm2.png")
     st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/svm3.png")
 
     
-    st.title( "Comparison")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/all.png")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/all2.png")
-    
 #End of Page 4--------------------------------------------------------------------------------------------------------------
-#Page 5 Time series Analysis----------------------------------------------------------------------------------------------------
-
-
-if selected == "Time series Analysis":
-    st.title(f" {selected}")
-    
-    st.title("5.1 SARIMAX Forecast ")
-    if st.button("Show Explanation & Results"):
-        st.subheader("Evaluation Results:")
-        st.write("""
-                    \n MAE  (Mean Absolute Error): 0.69
-                    \n R² Score (Coefficient of Determination): 0.03""")
-        st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/sarimax.png")
-    
-    st.title("5.2 XGBoost Forecast ")
-    st.subheader("Evaluation Results:")
-    st.write("""
-            \n MAE  (Mean Absolute Error): 0.73
-            \n R² Score (Coefficient of Determination): 0.39""")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/xgb4.png")
-    
-    st.title("5.3 ARIMA")
-    st.subheader("Evaluation Results:")
-    st.write("""
-                \n  MAE  (Mean Absolute Error): 0.90
-                \n R² Score: -0.16
-                    """)
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/arima.png")
-    
-    st.title("5.4 ETS")
-    st.subheader("Evaluation Results:")
-    st.write("""
-            \n MAE  (Mean Absolute Error): 0.91
-            \n R² Score: -0.15      """)
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS.png")
-    st.image("https://raw.githubusercontent.com/shimaahmadifar/BI/main/ETS2.png")
-    
-
